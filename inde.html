@@ -54,6 +54,18 @@
         <h2>As primeiras impressões</h2>
         <p>Bem-vindos! Aqui vou compartilhar minhas primeiras impressões sobre o vôlei</p>
         <p>Por: Caio Felipe</p>
+        <button>🏐 <span>0</span></button>
+        
     </main>
 </body>
+<script>
+    const botao = document.querySelector("button");
+    botao.addEventListener("click", botaoClicado);
+
+    function botaoClicado() {
+        console.log("fui cliado");
+        let texto = botao.querySelector("span");
+        texto.textContent++;
+    }
+</script>
 </html>
