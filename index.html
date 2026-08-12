@@ -3,81 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página Pessoal</title>
+    <title>Histórias Bíblicas</title>
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        header {
-            background-color: #FFDCA8;
-            color: #D90000;
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            border: 5px solid #ffbb00;
-        }
-
-        main {
-            background-color: #D90000;
-            color: #FFDCA8;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 16px;
-            border: 5px solid #f1a282;
-        }
-
-        article {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 20px;
-        }
-
-        main img {
-            max-width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        img {
-            width: 80px;
-            height: 80px;
+            background-color: #F4EAD5;
+            color: #2C1D11;
+}
+        button:hover {
+            background-color: #D6C0A0;
         }
     </style>
 </head>
 
 <body>
     <header>
-        <h1>Minha página pessoal</h1>
-        <p>Minhas experiências no vôlei</p>
+        <h1>Histórias da Bíblia</h1>
+        <p>Reflexões e aprendizados através das escrituras</p>
     </header>
     
     <main>
         <article>
-            <img src="imagem-01.png" alt="Uma ilustração em estilo de desenho à mão de uma bola de vôlei clássica, centralizada num quadrado. A bola é composta por painéis de cor creme (#FFDCA8) e contornada com traços rústicos e expressivos em vermelho (#D90000). O fundo tem uma textura de papel antigo, com uma borda branca desgastada. A imagem não contém texto e está em formato 1:1.">
+            <img src="biblia.png" alt="Ilustração de uma Bíblia antiga aberta">
             <div>
-                <h2>As primeiras impressões</h2>
-                <p>Bem-vindos! Aqui vou compartilhar minhas primeiras impressões sobre o vôlei</p>
+                <h2>A Coragem de Davi</h2>
+                <p>Bem-vindos! Hoje vamos refletir sobre como a fé de um jovem pastor venceu o gigante Golias.</p>
                 <p>Por: Caio Felipe</p>
-                <button>🏐 <span>0</span></button>
-                <button>👍 <span>0</span></button>
-                <button>👎 <span>0</span></button>
+                <button>📖 <span>0</span></button>
+                <button>🙏 <span>0</span></button>
+                <button>❤️ <span>0</span></button>
             </div>
         </article>
         
         <article>
-            <img src="imagem-01.png" alt="Uma ilustração em estilo de desenho à mão de uma bola de vôlei clássica, centralizada num quadrado. A bola é composta por painéis de cor creme (#FFDCA8) e contornada com traços rústicos e expressivos em vermelho (#D90000). O fundo tem uma textura de papel antigo, com uma borda branca desgastada. A imagem não contém texto e está em formato 1:1.">
+            <img src="biblia.png" alt="Ilustração de uma Bíblia antiga aberta">
             <div>
-                <h2>As segundas impressões</h2>
-                <p>Bem-vindos! Aqui vou compartilhar minhas primeiras impressões sobre o vôlei</p>
+                <h2>A Fé e Obediência de Noé</h2>
+                <p>Confira essa reflexão sobre persistência, obediência e a promessa do arco-íris.</p>
                 <p>Por: Caio Felipe</p>
-                <button>🏐 <span>0</span></button>
-                <button>👍 <span>0</span></button>
-                <button>👎 <span>0</span></button>
+                <button>📖 <span>0</span></button>
+                <button>🙏 <span>0</span></button>
+                <button>❤️ <span>0</span></button>
             </div>
         </article>
     </main>
@@ -89,14 +57,13 @@
             let curtiu = false;
             
             botao.addEventListener("click", function() {
-                console.log("fui clicado");
                 let texto = botao.querySelector("span");
                 
                 if (curtiu === false) {
-                    texto.textContent++;
+                    texto.textContent = Number(texto.textContent) + 1;
                     curtiu = true;
                 } else { 
-                    texto.textContent--;
+                    texto.textContent = Number(texto.textContent) - 1;
                     curtiu = false;
                 }
             });
